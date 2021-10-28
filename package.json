@@ -1,0 +1,25 @@
+{
+  "name": "onlinedictionary",
+  "version": "1.0.0",
+  "description": "Application that checks the correctness of words",
+  "main": "scr/app.js",
+  "scripts": {
+    "start": "node scr/app.js",
+    "dev": "nodemon scr/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KNOSERO/OnlineDictionary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KNOSERO/OnlineDictionary/issues"
+  },
+  "homepage": "https://github.com/KNOSERO/OnlineDictionary#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.14"
+  }
+}
