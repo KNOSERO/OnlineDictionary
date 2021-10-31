@@ -20,10 +20,19 @@ require('./passport')();
 app.use('/account', require('./routes/account'));
 app.use('/dictionary', require('./routes/dictionary'));
 
+app.use((req, res, next) => {
+    const error = new Error("Not found");
+    error.status = 404;
+    next(error);
+});
+
 app.use((error, req, res, next) => {
-    console.log("Error Handling Middleware called");
-    console.log('Path: ', req.path);
-    res.status(500).send(error);
+    res.status(error.status || 500).send({
+        error: {
+        status: error.status || 500,
+        message: error.message || "Internal Server Error",
+        },
+    });
 });
 
 app.listen(PORT, () => {
