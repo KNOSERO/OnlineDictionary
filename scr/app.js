@@ -35,8 +35,6 @@ app.use((error, req, res, next) => {
     });
 });
 
-app.get('/', (req, res) => {res.send("Serwer Działa")})
-
 app.listen(PORT, () => {
     console.log('APP WORK ...');
 });
